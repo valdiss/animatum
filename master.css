@@ -94,7 +94,7 @@ footer nav ul {
     src: url(fonts/primer_print.ttf);
 }
 
-@media all and (max-width: 960px) {
+@media screen and (max-width: 960px) {
     header {
         flex-direction: column;
     }
