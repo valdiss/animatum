@@ -21,11 +21,6 @@ header {
     height: 15vh;
 }
 
-img {
-    width: 120%;
-    height: 120%;
-}
-
 .title {
     display: flex;
     flex: 1;
@@ -103,11 +98,9 @@ footer nav ul {
     header {
         flex-direction: column;
     }
-
     h1 {
-      margin: auto;
+        margin: auto;
     }
-
     #svg_layer {
         display: none;
     }
