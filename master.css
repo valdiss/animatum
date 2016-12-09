@@ -10,10 +10,6 @@
     overflow: scroll;
 }
 
-img{
-  height: 170vh;
-}
-
 header {
     display: flex;
     align-items: center;
