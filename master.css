@@ -6,10 +6,12 @@
 }
 
 .canvas {
-    height: 75vh;
     background-color: #646869;
+    overflow: scroll;
 }
 
+#svg2 {
+}
 header {
     display: flex;
     align-items: center;
@@ -103,7 +105,7 @@ footer nav ul {
       margin: auto;
     }
 
-    svg {
+    #svg_layer {
         display: none;
     }
 }
