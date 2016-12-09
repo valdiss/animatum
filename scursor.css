@@ -2,10 +2,20 @@
   width: 200px;
   height: 200px;
   background-repeat: repeat-y;
-  animation: backgrdScroll 20s linear infinite;
+  animation: hbackgrdScroll 20s linear infinite;
 }
 
-@keyframes backgrdScroll {
+@keyframes hbackgrdScroll {
   from {background-position: 0 0;}
   to {background-position: -400px 0;}
+}
+#ver_scroll {
+  width: 200px;
+  height: 200px;
+  background-repeat: repeat-x;
+  animation: vbackgrdScroll 20s linear infinite;
+}
+@keyframes vbackgrdScroll {
+  from {background-position: 0 0;}
+  to {background-position: 0 -400px;}
 }
