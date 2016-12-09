@@ -1,0 +1,11 @@
+#hor_scroll {
+  width: 200px;
+  height: 200px;
+  background-repeat: repeat-y;
+  animation: backgrdScroll 20s linear infinite;
+}
+
+@keyframes backgrdScroll {
+  from {background-position: 0 0;}
+  to {background-position: -400px 0;}
+}
