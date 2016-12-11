@@ -5,13 +5,36 @@
     color: #646869;
 }
 
-.canvas {
-    background-color: #646869;
-    overflow: scroll;
+.content{
+  width: 1000px;
+  height: 700px;
+  overflow: hidden;
+  margin: auto;
 }
 
-img{
-  height: 170vh;
+.content img{
+  opacity: 0;
+  transition: opacity .6s linear .8s;
+  height: 150vh;
+}
+
+.content img.loaded{ opacity: 1; }
+
+.img-pan-container, .img-pan-container img{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.img-pan-container{
+  position: relative;
+  overflow: hidden;
+  cursor: crosshair;
+  height: 100%;
+  width: 100%;
+}
+
+.img-pan-container img{
+  -webkit-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 header {
