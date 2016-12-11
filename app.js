@@ -1,4 +1,5 @@
-document.addEventListener("onmousemove" function() {
-  document.getElementById("body").innerHTML = "";
+"use strict";
 
+document.addEventListener("mousemove", function() {
+  console.log(arguments);
 });
