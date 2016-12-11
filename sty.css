@@ -1,0 +1,11 @@
+body {
+  background-image: url(forest.png);
+  background-size: cover;
+  overflow: scroll;
+}
+  #box {
+  width: 4vw;
+  height: 4vh;
+  position:fixed;
+  border: 1px solid black;
+}
