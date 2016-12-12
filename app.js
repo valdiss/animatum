@@ -1,18 +1,17 @@
 "use strict";
- function moves(e){
-  var cordx = 0;
-  var cordy = 0;
-  if (!e) {
-   var e = window.event;
-  }
-  if (e.pageX || e.pageY){
-   cordx = e.pageX;
-   cordy = e.pageY;
-  }
-  else if (e.clientX || e.clientY){
-   cordx = e.clientX;
-   cordy = e.clientY;
-  }
-  document.getElementById('box').style.left = cordx;
-  document.getElementById('box').style.top = cordy;
- }
+
+//faire bouger la div background sur une img fixe
+document.addEventListener("mousemove", function(ev) {
+    //attribuer une variable let x = bouger horizontalement
+      let x = event.clientX;
+    //attribuer une variable let y = bouger verticalement
+      let y = event.clientY;
+//Je prends ma div background
+//deb boucle for quand la souris bouge pas
+  //si souris pas bouger alors pas bouger back
+//Debut boucle For quand je bouge la souris bouge back
+  //Deb si
+    //si la souris bouge hor alors bouge horizontalement back
+    //si souri bouge vert alors bouge verticalement back
+
+});
