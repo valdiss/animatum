@@ -1,11 +1,7 @@
-body {
-  background-image: url(forest.png);
-  background-size: cover;
+.scene {
+  margin: 0;
+  width: 500px;
+  height: 500px;
   overflow: scroll;
-}
-  #box {
-  width: 4vw;
-  height: 4vh;
-  position:fixed;
-  border: 1px solid black;
+  cursor: all-scroll;
 }
