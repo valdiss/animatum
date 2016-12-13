@@ -72,14 +72,15 @@ nav li a:hover {
 }
 
 .scene {
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
+}
+.background > img{
+  transform: translate();
 }
 .mask {
   background-color: black;
   position: absolute;
-  width: 35vw;
+  width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
 }
