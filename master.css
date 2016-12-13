@@ -23,6 +23,7 @@ header {
     background-size: cover;
     background-attachment: fixed;
     height: 15vh;
+    z-index: -1;
 }
 
 .title {
@@ -68,6 +69,26 @@ nav li a:hover {
     border-radius: 10px;
     background-color: rgba(200, 200, 200, 0.2);
     transition-duration: 0.7s;
+}
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.mask {
+  background-color: black;
+  position: absolute;
+  width: 35vw;
+  height: 100vh;
+  top: 0;
+}
+.mask_left {
+  left: 0;
+}
+
+.mask_right {
+  right: 0;
 }
 
 footer {
