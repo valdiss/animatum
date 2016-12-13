@@ -1,16 +1,18 @@
-.scene {
+*{
   margin: 0;
-  width: 100%;
-
 }
-img {
-  width: 100%;
+.scene {
+  width: 100vw;
+  height: 100vh;
 }
 .square_one {
   background-color: black;
   position: absolute;
-  width: calc(1299px/3);
-  height: calc(914px/3);
+  width: 90vh;
+  height: 90vh;
   top: 0;
   left: 0;
 }
+.square_two {}
+.square_three {}
+.square_four {}
