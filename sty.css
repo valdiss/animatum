@@ -1,0 +1,16 @@
+.scene {
+  margin: 0;
+  width: 100%;
+
+}
+img {
+  width: 100%;
+}
+.square_one {
+  background-color: black;
+  position: absolute;
+  width: calc(1299px/3);
+  height: calc(914px/3);
+  top: 0;
+  left: 0;
+}
