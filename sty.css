@@ -4,15 +4,19 @@
 .scene {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
-.square_one {
+.mask {
   background-color: black;
   position: absolute;
-  width: 90vh;
-  height: 90vh;
+  width: 35vw;
+  height: 100vh;
   top: 0;
+}
+.mask_left {
   left: 0;
 }
-.square_two {}
-.square_three {}
-.square_four {}
+
+.mask_right {
+  right: 0;
+}
