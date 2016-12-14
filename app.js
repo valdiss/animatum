@@ -13,13 +13,14 @@ let scrollBackground = function(img, ratioW, ratioH)
 {
     img.style["top"] = -mouseY*ratioH + "px";
     img.style["left"] = -mouseX*ratioW + "px";
+    lapin.style["top"] = -mouseY*ratioH + 700 +"px";
+    lapin.style["left"] = -mouseX*ratioW + 1250 + "px";
+
 }
 
 let ready = function()
 {
-    mouseX = window.innerWidth/2;
-    mouseY = window.innerHeight/2;
-
+    lapin =document.getElementById('rabbit')
     img = document.getElementById("image");
     ratioW = (img.offsetWidth - window.innerWidth)/window.innerWidth;
     ratioH = (img.offsetHeight - window.innerHeight)/window.innerHeight;
@@ -29,5 +30,8 @@ let ready = function()
             {
                 scrollBackground(img, ratioW, ratioH);
             });
+    lapin.addEventListener("click", function(){
+        alert ('Bien joué gros!');
+    });
 }
 document.addEventListener("DOMContentLoaded", ready);
