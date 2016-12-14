@@ -71,12 +71,14 @@ nav li a:hover {
 
 
 #view{
-  width: calc(100vw - (100vw / 2 - 30vh)*2);
+  width: 60vh;
   height: 100vh;
   top: 0;
   position: absolute;
   left: calc(100vw / 2 - 30vh);
-
+}
+#map{
+  position: absolute;
 }
 .mask {
   background-color: black;
