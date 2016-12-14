@@ -25,10 +25,14 @@
 }
 .mask {
   background-color: black;
+  background-image: url("accueil_background.png");
+  background-position: center;
+  background-size: cover;
   position: absolute;
   width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
+  
 }
 .mask_left {
   left: 0;
