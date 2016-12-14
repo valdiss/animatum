@@ -5,53 +5,45 @@
     color: #646869;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    background-image: url(pattern.jpg);
+body {
+    background-image: url("accueil_background.png");
     background-position: top;
-    background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    height: 15vh;
-    z-index: -1;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    margin: 10% auto;
 }
 
 .title {
-    display: flex;
-    flex: 1;
-    height: 15vh;
+    text-align: center;
+
 }
 
 h1 {
-    font-size: 10vh;
-    margin: auto 5%;
+    width: 100%;
+    font-size: 6em;
     font-family: geometric, sans-serif;
     color: black;
 }
 
-nav {
-    width: 100%;
-    flex: 1;
-}
-
 nav ul {
-    display: flex;
     list-style: none;
-    margin-top: 20px;
 }
 
 nav li {
-    display: flex;
-    flex: 1;
     text-align: center;
     font-family: base, sans-serif;
+    margin: 10px auto;
+    width: 50%;
 }
 
 nav li a {
-    flex: 1;
+    display: block;
     text-decoration: none;
-    color: #565656;
+    width: 100%;
     font-size: 3vh;
     padding: 5px 0;
 }
@@ -62,23 +54,6 @@ nav li a:hover {
     transition-duration: 0.7s;
 }
 
-footer {
-    background-image: url(pattern.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: local;
-}
-
-footer nav ul {
-    margin-top: 0;
-}
-
-#copyright {
-    text-align: center;
-    padding: 5px 0px;
-    background-color: rgba(200, 200, 200, 0.2);
-}
 
 @font-face {
     font-family: geometric;
@@ -92,12 +67,29 @@ footer nav ul {
 
 @media screen and (max-width: 960px) {
     header {
-        flex-direction: column;
+      width: 100%;
+      margin-top: 35%;
     }
     h1 {
-        margin: auto;
+      font-size: 5em;
     }
-    #svg_layer {
-        display: none;
+    #svg-layer{
+      width: 125px;
+      height: 125px;
     }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+      margin-top: 45%;
+    }
+
+    h1 {
+      font-size: 4em;
+    }
+    #svg-layer{
+      width: 100px;
+      height: 100px;
+    }
+
 }
