@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     color: #646869;
+    overflow: hidden;
 }
 
 .canvas {
@@ -10,9 +11,6 @@
     overflow: scroll;
 }
 
-img{
-  height: 170vh;
-}
 
 header {
     display: flex;
@@ -71,11 +69,14 @@ nav li a:hover {
     transition-duration: 0.7s;
 }
 
-.scene {
-  overflow: hidden;
-}
-.background > img{
-  transform: translate();
+
+#view{
+  width: calc(100vw - (100vw / 2 - 30vh)*2);
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  left: calc(100vw / 2 - 30vh);
+
 }
 .mask {
   background-color: black;
