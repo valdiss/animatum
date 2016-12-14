@@ -1,4 +1,4 @@
-let mouseX;
+/*let mouseX;
 let mouseY;
 let img;
 let ratioW;
@@ -31,3 +31,15 @@ let ready = function()
             });
 }
 document.addEventListener("DOMContentLoaded", ready);
+*/
+//créer une fonction
+function disappearEvent() {
+  //créer une variable du moment du click
+  let ev= new MouseEvent('click', {
+    'view': window,
+  //
+    'bubbles': true,
+  //évènement annulable
+    'cancelable': true
+  });
+}
