@@ -69,18 +69,24 @@ nav li a:hover {
     background-color: rgba(200, 200, 200, 0.2);
     transition-duration: 0.7s;
 }
-.object_rabbit {
+#astronaut, #robot {
   position: absolute;
   width: 64px;
   height: 64px;
-  top: 50%;
-  left: 50%;
   margin-left: -300px;
   width: 50%;
   animation-name: invisible;
   animation-duration: 2s;
   -webkit-animation-duration: 2s;
 
+}
+#astronaut {
+  top: 20%;
+  left: 50%;
+}
+#robot {
+  top: 50%;
+  left: 35%;
 }
 @keyframes invisible {
   0% {
