@@ -1,8 +1,4 @@
-#grab_rabbit {
-  width: 100%;
-}
-
-img {
+#grab_rabbit, .object_rabbit {
   position: absolute;
   top: 50%;
   left: 50%;

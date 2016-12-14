@@ -69,6 +69,50 @@ nav li a:hover {
     background-color: rgba(200, 200, 200, 0.2);
     transition-duration: 0.7s;
 }
+.object_rabbit {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  width: 50%;
+  animation-name: invisible;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+
+}
+@keyframes invisible {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes invisible {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+}
 
 footer {
     background-image: url(pattern.jpg);
