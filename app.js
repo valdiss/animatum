@@ -34,12 +34,25 @@ document.addEventListener("DOMContentLoaded", ready);
 */
 //créer une fonction
 function disappearEvent() {
-  //créer une variable du moment du click
-  let ev= new MouseEvent('click', {
-    'view': window,
-  //génère une bulle
-    'bubbles': true,
-  //évènement annulable
-    'cancelable': true
-  });
+    //créer une variable du moment du click
+    let ev = new MouseEvent('click', {
+        'view': window,
+        //génère une bulle
+        'bubbles': true,
+        //évènement annulable
+        'cancelable': true
+    });
+    //créer des variables où Get the element with the specified ID
+    let grabA = document.getElementById('astronaut');
+    let grabR = document.getElementById('robot');
+    // créer une variable pour envoyer un évènement dans le système d'évènements pour ne pas enclencher l'evènement
+    let cancelA = !grabA.dispatchEvent(ev);
+    let cancelR = !grabR.dispatchEvent(ev);
+    if (cancelA || cancelR) {
+      //Un gestionnaire appelé preventDefault.
+      alert("canceled");
+    } else {
+      //Aucun gestionnaires appelé preventDefault.
+      alert("not canceled");
+    }
 }
