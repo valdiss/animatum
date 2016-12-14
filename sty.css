@@ -1,6 +1,31 @@
-.scene {
-  margin: 0;
-  width: 500px;
-  height: 500px;
-  overflow: scroll;
+#grab_rabbit {
+  width: 100%;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  width: 50%;
+  animation-name: invisible;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+
+}
+
+@-webkit-keyframes invisible {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
 }
