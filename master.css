@@ -80,19 +80,23 @@ nav li a:hover {
 #map{
   position: absolute;
 }
-.mask {
+
+#mask_left {
+  left: 0;
   background-color: black;
   position: absolute;
   width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
 }
-.mask_left {
-  left: 0;
-}
 
-.mask_right {
+#mask_right {
   right: 0;
+  background-color: black;
+  position: absolute;
+  width: calc(100vw / 2 - 30vh);
+  height: 100vh;
+  top: 0;
 }
 
 footer {
