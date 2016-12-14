@@ -37,7 +37,7 @@ function disappearEvent() {
   //créer une variable du moment du click
   let ev= new MouseEvent('click', {
     'view': window,
-  //
+  //génère une bulle
     'bubbles': true,
   //évènement annulable
     'cancelable': true
