@@ -23,6 +23,7 @@ let ready = function()
     ratioH = (map.offsetHeight - view.offsetHeight)/view.offsetHeight;
     view.addEventListener("mousemove", updateMouse);
     view.addEventListener("mousemove", function()
+
             {
                 scrollBackground(map, ratioW, ratioH);
             });

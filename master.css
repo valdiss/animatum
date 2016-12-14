@@ -8,7 +8,9 @@
 
 .canvas {
     background-color: #646869;
-    overflow: scroll;
+    overflow: hidden;
+    width: 50%;
+    height: 100vh;
 }
 
 
@@ -84,57 +86,24 @@ nav li a:hover {
 #mask_left {
   left: 0;
   background-color: black;
+  background-image: url("accueil_background.png");
+  background-position: center;
+  background-size: cover;
   position: absolute;
   width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
+
 }
 
 #mask_right {
   right: 0;
   background-color: black;
+  background-image: url("accueil_background.png");
+  background-position: center;
+  background-size: cover;
   position: absolute;
   width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
-}
-
-footer {
-    background-image: url(pattern.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: local;
-}
-
-footer nav ul {
-    margin-top: 0;
-}
-
-#copyright {
-    text-align: center;
-    padding: 5px 0px;
-    background-color: rgba(200, 200, 200, 0.2);
-}
-
-@font-face {
-    font-family: geometric;
-    src: url(fonts/R&C-Demo.otf);
-}
-
-@font-face {
-    font-family: base;
-    src: url(fonts/primer_print.ttf);
-}
-
-@media screen and (max-width: 960px) {
-    header {
-        flex-direction: column;
-    }
-    h1 {
-        margin: auto;
-    }
-    #svg_layer {
-        display: none;
-    }
 }
