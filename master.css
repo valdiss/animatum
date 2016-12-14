@@ -7,67 +7,67 @@
 
 .canvas {
     background-color: #646869;
-    overflow: scroll;
+    overflow: hidden;
+    width: 50%;
+    height: 100vh;
 }
 
-img{
-  height: 170vh;
+#image{
+  position: absolute;
+  height: 250vh;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    background-image: url(pattern.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 15vh;
+.scene {
+  overflow: hidden;
+}
+.background > img{
+  transform: translate();
+}
+.mask {
+  background-color: black;
+  position: absolute;
+  width: calc(100vw / 2 - 30vh);
+  height: 100vh;
+  top: 0;
+}
+.mask_left {
+  left: 0;
 }
 
-.title {
-    display: flex;
-    flex: 1;
-    height: 15vh;
+.mask_right {
+  right: 0;
+}
+<<<<<<< HEAD
+
+.gameWindow{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 60vh;
+  position: absolute;
+  top: 0;
+  left: calc(100vw / 2 - 30vh);
 }
 
-h1 {
-    font-size: 10vh;
-    margin: auto 5%;
-    font-family: geometric, sans-serif;
-    color: black;
+#nw, #ne, #se, #sw{
+  height: 50%;
+  width: 50%;
 }
 
-nav {
-    width: 100%;
-    flex: 1;
+#nw{
+  cursor: url(cursors/carottenw.png), auto;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    margin-top: 20px;
+#ne{
+  cursor: url(cursors/carottene.png), auto;
 }
 
-nav li {
-    display: flex;
-    flex: 1;
-    text-align: center;
-    font-family: base, sans-serif;
+#sw{
+  cursor: url(cursors/carottesw.png), auto;
 }
 
-nav li a {
-    flex: 1;
-    text-decoration: none;
-    color: #565656;
-    font-size: 3vh;
-    padding: 5px 0;
-}
-
-nav li a:hover {
-    border-radius: 10px;
-    background-color: rgba(200, 200, 200, 0.2);
-    transition-duration: 0.7s;
+#se{
+  cursor: url(cursors/carottese.png), auto;
 }
 
 footer {
@@ -109,3 +109,5 @@ footer nav ul {
         display: none;
     }
 }
+=======
+>>>>>>> 95736936567911c4427f299e7974163f93ebb4f2

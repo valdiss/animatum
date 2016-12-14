@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Animatum</title>
-    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="favicon/geometric-icon.ico">
 </head>
 
@@ -282,7 +282,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">Play</a>
+                    <a href="game.html">Play</a>
                 </li>
                 <li>
                     <a href="#">How to</a>
@@ -292,11 +292,25 @@
                 </li>
             </ul>
         </nav>
-
     </header>
+
+<!------jeux------>
+
     <div class="canvas">
-      <img src="svg_decors/nature.svg" alt="" />
+          <div class="background">
+            <img src="svg_decors\space.svg.png" alt="" />
+          </div>
+          <div class="mask mask_left"></div>
+          <div class="mask mask_right"></div>
+          <div class="gameWindow">
+            <div id="nw"></div>
+            <div id="ne"></div>
+            <div id="sw"></div>
+            <div id="se"></div>
+          </div>
     </div>
+    <!------footer------>
+
     <footer>
         <nav>
             <ul>
@@ -309,7 +323,6 @@
             &copy Jessica Valentin Alice Linda
         </p>
     </footer>
-    <script src="app.js"></script>
 </body>
 
 </html>
