@@ -7,11 +7,14 @@
 
 .canvas {
     background-color: #646869;
-    overflow: scroll;
+    overflow: hidden;
+    width: 50%;
+    height: 100vh;
 }
 
-img{
-  height: 170vh;
+#image{
+  position: absolute;
+  height: 250vh;
 }
 
 header {
@@ -23,6 +26,7 @@ header {
     background-size: cover;
     background-attachment: fixed;
     height: 15vh;
+    z-index: -1;
 }
 
 .title {
@@ -68,6 +72,27 @@ nav li a:hover {
     border-radius: 10px;
     background-color: rgba(200, 200, 200, 0.2);
     transition-duration: 0.7s;
+}
+
+.scene {
+  overflow: hidden;
+}
+.background > img{
+  transform: translate();
+}
+.mask {
+  background-color: black;
+  position: absolute;
+  width: calc(100vw / 2 - 30vh);
+  height: 100vh;
+  top: 0;
+}
+.mask_left {
+  left: 0;
+}
+
+.mask_right {
+  right: 0;
 }
 
 footer {
