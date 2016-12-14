@@ -21,7 +21,6 @@ let ready = function()
     mouseY = window.innerHeight/2;
 
     img = document.getElementById("image");
-    img = document.getElementById("D");
     ratioW = (img.offsetWidth - window.innerWidth)/window.innerWidth;
     ratioH = (img.offsetHeight - window.innerHeight)/window.innerHeight;
 
