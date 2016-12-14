@@ -95,6 +95,37 @@ nav li a:hover {
   right: 0;
 }
 
+.gameWindow{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 60vh;
+  position: absolute;
+  top: 0;
+  left: calc(100vw / 2 - 30vh);
+}
+
+#nw, #ne, #se, #sw{
+  height: 50%;
+  width: 50%;
+}
+
+#nw{
+  cursor: url(cursors/carottenw.png), auto;
+}
+
+#ne{
+  cursor: url(cursors/carottene.png), auto;
+}
+
+#sw{
+  cursor: url(cursors/carottesw.png), auto;
+}
+
+#se{
+  cursor: url(cursors/carottese.png), auto;
+}
+
 footer {
     background-image: url(pattern.jpg);
     background-position: top;
