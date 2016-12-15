@@ -32,7 +32,7 @@
   width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
-  
+
 }
 .mask_left {
   left: 0;
@@ -71,6 +71,13 @@
 
 #se{
   cursor: url(cursors/carottese.png), auto;
+}
+
+#timer{
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 footer {
