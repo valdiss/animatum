@@ -14,7 +14,11 @@
 
 #image{
   position: absolute;
-  height: 250vh;
+}
+
+#rabbit {
+  position: absolute;
+  z-index: 1;
 }
 
 .scene {
@@ -32,7 +36,7 @@
   width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
-
+  z-index: 2
 }
 .mask_left {
   left: 0;
