@@ -5,7 +5,7 @@ let timer = document.getElementById("timer");
 let timerId = setInterval(countdown, 1000);
 
 function countdown(){
-  if(timeLeft == 0){
+  if(timeLeft < 0){
     clearTimeout(timerId);
     alert("GAME OVER");
   }

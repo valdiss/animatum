@@ -73,11 +73,25 @@
   cursor: url(cursors/carottese.png), auto;
 }
 
+.timer{
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: calc(((100vw / 2 - 30vh) / 2) - 10vh);
+  height: 10vh;
+  width : 20vh;
+  background-color: black;
+  border: #900906 solid 3px;
+  border-radius: 5px;
+  box-shadow: 1vh 1vh 2vh #900906;
+  font-size: 5vh;
+  font-weight: bolder;
+}
+
 #timer{
   z-index: 100;
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin: auto;
+  color: #900906;
 }
 
 footer {
@@ -119,5 +133,3 @@ footer nav ul {
         display: none;
     }
 }
-=======
->>>>>>> 95736936567911c4427f299e7974163f93ebb4f2
