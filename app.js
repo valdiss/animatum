@@ -1,33 +1,46 @@
+
 let mouseX;
 let mouseY;
-let img;
+let view = document.getElementById("view");
+let map = document.getElementById("map");
 let ratioW;
 let ratioH;
+let rabbit = document.getElementById('rabbit');
+
+
 
 let updateMouse = function()
 {
-    mouseX = event.clientX;
+    mouseX = (event.clientX) - (document.getElementById('mask_left').offsetWidth);
     mouseY = event.clientY;
 }
-let scrollBackground = function(img, ratioW, ratioH)
+let scrollBackground = function(map, ratioW, ratioH)
 {
-    img.style["top"] = -mouseY*ratioH + "px";
-    img.style["left"] = -mouseX*ratioW + "px";
-}
+    map.style["top"] = -mouseY*ratioH + "px";
+    map.style["left"] = -mouseX*ratioW + "px";
 
+//    rabbit.style["top"] = -mouseY*ratioH + 700 +"px";
+//    rabbit.style["left"] = -mouseX*ratioW + 1250 + "px";
+
+}
 let ready = function()
 {
-    mouseX = window.innerWidth/2;
-    mouseY = window.innerHeight/2;
 
-    img = document.getElementById("image");
-    ratioW = (img.offsetWidth - window.innerWidth)/window.innerWidth;
-    ratioH = (img.offsetHeight - window.innerHeight)/window.innerHeight;
+    mouseX = view.offsetWidth/2;
+    mouseY = view.offsetHeight/2;
+    
+    ratioW = (map.offsetWidth - view.offsetWidth)/view.offsetWidth;
+    ratioH = (map.offsetHeight - view.offsetHeight)/view.offsetHeight;
 
-    document.addEventListener("mousemove", updateMouse);
-    document.addEventListener("mousemove", function()
+
+    view.addEventListener("mousemove", updateMouse);
+    view.addEventListener("mousemove", function()
+
             {
-                scrollBackground(img, ratioW, ratioH);
+                scrollBackground(map, ratioW, ratioH);
             });
+    rabbit.addEventListener("click", function(){
+        alert ('Bien joué gros!');
+    });
 }
 document.addEventListener("DOMContentLoaded", ready);
