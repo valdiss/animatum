@@ -1,27 +1,18 @@
-#grab_rabbit, .object_rabbit {
+#image {
+  width: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -300px;
-  width: 50%;
-  animation-name: invisible;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
 
 }
-
-@-webkit-keyframes invisible {
-  0% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
+#astronaut, #robot {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+}
+#astronaut {
+  top: 50%;
+  left: 50%;
+}
+#robot {
+  top: 40%;
+  left: 30%;
 }
