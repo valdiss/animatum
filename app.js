@@ -30,4 +30,15 @@ let ready = function()
                 scrollBackground(img, ratioW, ratioH);
             });
 }
+/*Quand le pers
+create a variable*/
+let rabbit = document.getElementById("rabbit");
+let astronaut = document.getElementById("astronaut");
+let robot = document.getElementById("robot");
+//create a add event listener on click
+document.addEventListener("onclick", function(event) {
+//get the area concerned and then the display none
+  document.getElementById("astronaut").style.display = "none";
+  document.getElementById("robot").style.display = "none";
+})
 document.addEventListener("DOMContentLoaded", ready);
