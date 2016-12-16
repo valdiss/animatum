@@ -59,10 +59,10 @@ let table_background_foret = [{
 
 let position_obj;
 
-let updateMouse = function() {
-    mouseX = (event.clientX) - (document.getElementById('mask_left').offsetWidth);
-    mouseY = event.clientY;
-}
+let updateMouse = function(e) {
+    mouseX = (e.clientX) - (document.getElementById('mask_left').offsetWidth);
+    mouseY = e.clientY;
+};
 
 let scrollBackground = function(map, ratioW, ratioH, position_obj) {
     map.style["top"] = -mouseY * ratioH + "px";
@@ -70,7 +70,7 @@ let scrollBackground = function(map, ratioW, ratioH, position_obj) {
     lapin.style["top"] = -mouseY * ratioH + position_obj.top + "px";
     lapin.style["left"] = -mouseX * ratioW + position_obj.left + "px";
     lapin.style["width"] = position_obj.width + "px";
-}
+};
 
 let ready = function() {
     if (map.src.match("space")) {
@@ -93,5 +93,6 @@ let ready = function() {
     rabbit.addEventListener("click", function() {
         alert('Bien joué gros!');
     });
-}
+};
+
 document.addEventListener("DOMContentLoaded", ready);
