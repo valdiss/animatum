@@ -1,6 +1,6 @@
 "use strict"
 
-let timeLeft = 3;
+let timeLeft = 30;
 let timer = document.getElementById("timer");
 let timerId = setInterval(countdown, 1000);
 
