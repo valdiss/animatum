@@ -78,7 +78,6 @@ nav li a:hover {
   width: 60vh;
   position: absolute;
   top: 0;
-  left: calc(100vw / 2 - 30vh);
 }
 #view{
   width: 60vh;
