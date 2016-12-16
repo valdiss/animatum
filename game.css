@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     color: #646869;
+    overflow: hidden;
 }
 
 .canvas {
@@ -12,22 +13,28 @@
     height: 100vh;
 }
 
-#image{
+.gameWindow{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 60vh;
+  position: absolute;
+  top: 0;
+}
+
+#view{
+  width: 60vh;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  left: calc(100vw / 2 - 30vh);
+}
+
+#map{
   position: absolute;
 }
 
-#rabbit {
-  position: absolute;
-  z-index: 1;
-}
-
-.scene {
-  overflow: hidden;
-}
-.background > img{
-  transform: translate();
-}
-.mask {
+#mask_left, #mask_right {
   background-color: black;
   background-image: url("accueil_background.png");
   background-position: center;
@@ -36,25 +43,20 @@
   width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
-  z-index: 2
-
+  z-index: 2;
 }
+
 .mask_left {
   left: 0;
 }
 
-.mask_right {
+.mask_right{
   right: 0;
 }
 
-.gameWindow{
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  width: 60vh;
+#rabbit {
   position: absolute;
-  top: 0;
-  left: calc(100vw / 2 - 30vh);
+  z-index: 1;
 }
 
 #nw, #ne, #se, #sw{
@@ -76,4 +78,25 @@
 
 #se{
   cursor: url(cursors/carottese.png), auto;
+}
+
+.timer{
+  z-index: 100;
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: calc(((100vw / 2 - 30vh) / 2) - 7.5vh);
+  height: 15vh;
+  width: 15vh;
+  background-color: black;
+  border: #900906 solid 3px;
+  border-radius: 50%;
+  box-shadow: 1vh 1vh 2vh #900906;
+  font-size: 5vh;
+  font-weight: bolder;
+}
+
+#timer{
+  margin: auto;
+  color: #900906;
 }
