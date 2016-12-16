@@ -3,31 +3,94 @@
     margin: 0;
     padding: 0;
     color: #646869;
+    overflow: hidden;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    background-image: url(pattern.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 15vh;
+    z-index: -1;
+}
+
+.title {
+    display: flex;
+    flex: 1;
+    height: 15vh;
+}
+
+h1 {
+    font-size: 10vh;
+    margin: auto 5%;
+    font-family: geometric, sans-serif;
+    color: black;
+}
+
+nav {
+    width: 100%;
+    flex: 1;
+}
+
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav li {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    font-family: base, sans-serif;
+}
+
+nav li a {
+    flex: 1;
+    text-decoration: none;
+    color: #565656;
+    font-size: 3vh;
+    padding: 5px 0;
+}
+
+nav li a:hover {
+    border-radius: 10px;
+    background-color: rgba(200, 200, 200, 0.2);
+    transition-duration: 0.7s;
+}
 .canvas {
     background-color: #646869;
     overflow: hidden;
     width: 50%;
     height: 100vh;
 }
-
-#image{
+.gameWindow{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 60vh;
+  position: absolute;
+  top: 0;
+}
+#view{
+  width: 60vh;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  left: calc(100vw / 2 - 30vh);
+}
+#map{
   position: absolute;
 }
 
-#rabbit {
-  position: absolute;
-  z-index: 1;
-}
-
-.scene {
-  overflow: hidden;
-}
-.background > img{
-  transform: translate();
-}
-.mask {
+#mask_left, #mask_right {
   background-color: black;
   background-image: url("accueil_background.png");
   background-position: center;
@@ -36,25 +99,22 @@
   width: calc(100vw / 2 - 30vh);
   height: 100vh;
   top: 0;
+
   z-index: 2
 }
 .mask_left {
   left: 0;
 }
-
-.mask_right {
+.mask_right{
   right: 0;
 }
-
-.gameWindow{
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  width: 60vh;
-  position: absolute;
-  top: 0;
-  left: calc(100vw / 2 - 30vh);
+#rabbit {
+  position: relative;
+  top: -20px;
+  left: -20px;
+  z-index: 1;
 }
+
 
 #nw, #ne, #se, #sw{
   height: 50%;
