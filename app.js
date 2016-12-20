@@ -6,7 +6,6 @@ let lapin = document.getElementById('rabbit');;
 let ratioW;
 let ratioH;
 let backgrounds = ["svg_decors/space.png", "svg_decors/forest.png"];
-let score = 0;
 let table_background_espace = [{
     top: 700,
     left: 1250,
@@ -75,7 +74,7 @@ let scrollBackground = function(map, ratioW, ratioH, position_obj) {
 };
 
 let ready = function() {
-
+    let score = 0;
     position_obj = table_background_espace[Math.floor(Math.random() * 6)];
     console.log(position_obj);
 
