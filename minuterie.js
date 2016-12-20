@@ -7,7 +7,7 @@ let timerId = setInterval(countdown, 1000);
 function countdown() {
     if (timeLeft < 0) {
         clearTimeout(timerId);
-        alert("GAME OVER");
+        alert("GAME OVER, tu as fait: "+ score + " points");
     } else {
         timer.innerHTML = timeLeft;
         timeLeft--;

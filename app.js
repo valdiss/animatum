@@ -5,6 +5,8 @@ let map = document.getElementById("map");
 let lapin = document.getElementById('rabbit');;
 let ratioW;
 let ratioH;
+let backgrounds = ["svg_decors/space.png", "svg_decors/forest.png"];
+let score = 0;
 let table_background_espace = [{
     top: 700,
     left: 1250,
@@ -73,13 +75,9 @@ let scrollBackground = function(map, ratioW, ratioH, position_obj) {
 };
 
 let ready = function() {
-    if (map.src.match("space")) {
-        position_obj = table_background_espace[Math.floor(Math.random() * 6)];
-        console.log(position_obj);
-    } else if (map.src.match("forest")) {
-        position_obj = table_background_foret[Math.floor(Math.random() * 6)];
-        console.log(position_obj);
-    }
+
+    position_obj = table_background_espace[Math.floor(Math.random() * 6)];
+    console.log(position_obj);
 
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;
     ratioH = (map.offsetHeight - view.offsetHeight) / view.offsetHeight;
@@ -92,7 +90,18 @@ let ready = function() {
 
     rabbit.addEventListener("click", function() {
         alert('Bien joué gros!');
+        timeLeft+=5;
+        score+= 10;
+        map.src = backgrounds[Math.floor(Math.random() * 2)];
+        if (map.src.match("space")) {
+            position_obj = table_background_espace[Math.floor(Math.random() * 6)];
+            console.log(position_obj);
+        } else if (map.src.match("forest")) {
+            position_obj = table_background_foret[Math.floor(Math.random() * 6)];
+            console.log(position_obj);
+        }
     });
+
 };
 
 document.addEventListener("DOMContentLoaded", ready);
