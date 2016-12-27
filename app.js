@@ -2,7 +2,9 @@ let mouseX;
 let mouseY;
 let view = document.getElementById('view');
 let map = document.getElementById('map');
-let lapin = document.getElementById('rabbit');;
+let lapin = document.getElementById('rabbit');
+let bonus = document.getElementById('bonus');
+let shot = document.getElementById('shot');
 let ratioW;
 let ratioH;
 let backgrounds = ["svg_decors/space.png", "svg_decors/forest.png"];
@@ -103,7 +105,15 @@ let ready = function() {
     });
 
     lapin.addEventListener("click", function() {
-
+        shot.play();
+        lapin.src="svg_personnages/rabbit_blood.png";
+        setTimeout(function(){lapin.style.display = "none";},200);
+        bonus.style.display="block";
+        setTimeout(function(){
+          bonus.style.display = "none";
+          lapin.style.display = "block";
+          lapin.src="svg_personnages/rabbit.png";
+        }, 500);
         timeLeft+=5;
         score+= 10;
         map.src = backgrounds[Math.floor(Math.random() * 2)];

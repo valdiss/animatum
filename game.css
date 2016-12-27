@@ -68,6 +68,10 @@
     z-index: 1;
 }
 
+#rabbit:hover {
+    cursor: crosshair;
+}
+
 
 /*************************************************carrot icon*/
 
@@ -179,7 +183,9 @@ button:hover {
     src: url(fonts/primer_print.ttf);
 }
 
+
 /*****************************************Sound controls*/
+
 #mute {
     position: absolute;
     width: 50px;
@@ -202,6 +208,25 @@ button:hover {
     display: none;
 }
 
-#sound.visible{
+#sound.visible {
+    display: block;
+}
+
+
+/*****************************************Bonus 5s*/
+
+#bonus {
+    display: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #900906;
+    position: absolute;
+    top: 36%;
+    left: calc(((100vw / 2 - 20vh) / 2) - 7.5vh);
+    background-color: rgba(0, 0, 0, 0.8);;
+    z-index: 3;
+}
+
+#bonus.visible {
     display: block;
 }

@@ -23,6 +23,8 @@ function countdown() {
         document.querySelector('h1').appendChild(paragraph);
         cover.classList.add("visible");
         popup.classList.add("visible");
+        document.getElementById('space').pause();
+        document.getElementById('down').play();
     } else {
         timer.innerHTML = timeLeft;
         timeLeft--;
