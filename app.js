@@ -59,6 +59,7 @@ let table_background_foret = [{
 }];
 
 let position_obj;
+let score;
 
 let updateMouse = function(e) {
     mouseX = (e.clientX) - (document.getElementById('mask_left').offsetWidth);
@@ -74,7 +75,7 @@ let scrollBackground = function(map, ratioW, ratioH, position_obj) {
 };
 
 let ready = function() {
-    let score = 0;
+    score = 0;
     position_obj = table_background_espace[Math.floor(Math.random() * 6)];
     console.log(position_obj);
 
