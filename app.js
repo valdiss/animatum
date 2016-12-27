@@ -1,7 +1,7 @@
 let mouseX;
 let mouseY;
-let view = document.getElementById("view");
-let map = document.getElementById("map");
+let view = document.getElementById('view');
+let map = document.getElementById('map');
 let lapin = document.getElementById('rabbit');;
 let ratioW;
 let ratioH;
@@ -74,7 +74,7 @@ let scrollBackground = function(map, ratioW, ratioH, position_obj) {
     lapin.style["width"] = position_obj.width + "px";
 };
 
-let refreshPage= function(){
+let refreshPage= function () {
     window.location.reload();
 };
 
@@ -85,14 +85,25 @@ let ready = function() {
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;
     ratioH = (map.offsetHeight - view.offsetHeight) / view.offsetHeight;
 
-
     view.addEventListener("mousemove", updateMouse);
     view.addEventListener("mousemove", function() {
         scrollBackground(map, ratioW, ratioH, position_obj);
     });
 
-    rabbit.addEventListener("click", function() {
-        alert('Bien joué gros!'); //faire apparaitre un popup
+    document.getElementById('mute').addEventListener("click", function() {
+        document.getElementById('space').pause();
+        document.getElementById('sound').classList.toggle('visible');
+        document.getElementById('mute').classList.toggle('visible');
+    });
+
+    document.getElementById('sound').addEventListener("click", function() {
+        document.getElementById('space').play();
+        document.getElementById('sound').classList.toggle('visible');
+        document.getElementById('mute').classList.toggle('visible');
+    });
+
+    lapin.addEventListener("click", function() {
+
         timeLeft+=5;
         score+= 10;
         map.src = backgrounds[Math.floor(Math.random() * 2)];

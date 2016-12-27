@@ -5,7 +5,10 @@
     color: #646869;
     overflow: hidden;
 }
+
+
 /*************************************************game itself*/
+
 .canvas {
     background-color: #646869;
     overflow: hidden;
@@ -13,152 +16,192 @@
     height: 100vh;
 }
 
-.gameWindow{
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  width: 60vh;
-  position: absolute;
-  top: 0;
+.gameWindow {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 60vh;
+    position: absolute;
+    top: 0;
 }
 
-#view{
-  width: 60vh;
-  height: 100vh;
-  top: 0;
-  position: absolute;
-  left: calc(100vw / 2 - 30vh);
+#view {
+    width: 60vh;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    left: calc(100vw / 2 - 30vh);
 }
 
-#map{
-  position: absolute;
+#map {
+    position: absolute;
 }
+
+
 /*************************************************masks left & right*/
+
 #mask_left, #mask_right {
-  background-color: black;
-  background-image: url("accueil_background.png");
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  width: calc(100vw / 2 - 30vh);
-  height: 100vh;
-  top: 0;
-  z-index: 2;
+    background-color: black;
+    background-image: url("accueil_background.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: calc(100vw / 2 - 30vh);
+    height: 100vh;
+    top: 0;
+    z-index: 2;
 }
 
 .mask_left {
-  left: 0;
+    left: 0;
 }
 
-.mask_right{
-  right: 0;
+.mask_right {
+    right: 0;
 }
+
+
 /*************************************************rabbit*/
+
 #rabbit {
-  position: absolute;
-  z-index: 1;
-}
-/*************************************************carrot*/
-#nw, #ne, #se, #sw{
-  height: 50%;
-  width: 50%;
+    position: absolute;
+    z-index: 1;
 }
 
-#nw{
-  cursor: url(cursors/carottenw.png), auto;
+
+/*************************************************carrot icon*/
+
+#nw, #ne, #se, #sw {
+    height: 50%;
+    width: 50%;
 }
 
-#ne{
-  cursor: url(cursors/carottene.png), auto;
+#nw {
+    cursor: url(cursors/carottenw.png), auto;
 }
 
-#sw{
-  cursor: url(cursors/carottesw.png), auto;
+#ne {
+    cursor: url(cursors/carottene.png), auto;
 }
 
-#se{
-  cursor: url(cursors/carottese.png), auto;
+#sw {
+    cursor: url(cursors/carottesw.png), auto;
 }
+
+#se {
+    cursor: url(cursors/carottese.png), auto;
+}
+
+
 /**************************************************timer*/
-.timer{
-  z-index: 3;
-  display: flex;
-  position: absolute;
-  top: 42%;
-  left: calc(((100vw / 2 - 30vh) / 2) - 7.5vh);
-  height: 15vh;
-  width: 15vh;
-  background-color: black;
-  border: #900906 solid 3px;
-  border-radius: 50%;
-  box-shadow: 1vh 1vh 2vh #900906;
-  font-size: 5vh;
-  font-weight: bolder;
+
+.timer {
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    top: 42%;
+    left: calc(((100vw / 2 - 30vh) / 2) - 7.5vh);
+    height: 15vh;
+    width: 15vh;
+    background-color: black;
+    border: #900906 solid 3px;
+    border-radius: 50%;
+    box-shadow: 1vh 1vh 2vh #900906;
+    font-size: 5vh;
+    font-weight: bolder;
 }
 
-#timer{
-  margin: auto;
-  color: #900906;
+#timer {
+    margin: auto;
+    color: #900906;
 }
-/**************************************************/
+
+
 /*************************************************score popup*/
+
 #cover {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(255,255,255,0.3);
-  z-index: 5;
-  display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 5;
+    display: none;
 }
 
 #score {
-  background-color: white;
-  border-radius: 10px;
-  padding: 40px;
-  width: 50%;
-  margin: auto;
-  display: none;
-  text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    width: 50%;
+    margin: auto;
+    display: none;
+    text-align: center;
 }
 
 #score h1 {
-  font-size: 4em;
+    font-size: 4em;
 }
 
 #score p {
-  font-family: base, sans-serif;
-  font-size: 0.5em;
-  margin: 10px;
+    font-family: base, sans-serif;
+    font-size: 0.5em;
+    margin: 10px;
 }
 
 #cover.visible {
-  display: flex;
+    display: flex;
 }
 
 #score.visible {
-  display: block;
+    display: block;
 }
 
 button {
-  font-family: base, sans-serif;
-  font-size: 1.5em;
-  padding: 10px;
-  background-color: white;
-  box-shadow: 0px 0px 10px;
-  border: none;
-  border-radius: 10px;
-  margin: 10px;
+    font-family: base, sans-serif;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 button:hover {
-  border: none;
-  box-shadow: inset 0px 0px 7px;
-  background-color: rgba(0, 0, 0, 0.1);
-
+    border: none;
+    box-shadow: inset 0px 0px 7px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 @font-face {
     font-family: base;
     src: url(fonts/primer_print.ttf);
+}
+
+/*****************************************Sound controls*/
+#mute {
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    display: none;
+}
+
+#mute.visible {
+    display: block;
+}
+
+#sound {
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    display: none;
+}
+
+#sound.visible{
+    display: block;
 }

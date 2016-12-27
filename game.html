@@ -14,7 +14,7 @@
     <div class="canvas">
         <div id="view">
             <img id="map" src="svg_decors/space.png" alt="" />
-            <img id="rabbit" src="svg_personnages/rabbit.png" alt="" />
+            <img id="rabbit" src="svg_personnages/rabbit.png" alt=""/>
             <div class="gameWindow">
                 <div id="nw"></div>
                 <div id="ne"></div>
@@ -35,6 +35,13 @@
             <button type="button" onclick="refreshPage()">Rejouer!</button>
         </div>
     </div>
+    <div id="bonus">
+      +5s!
+    </div>
+
+    <audio id='space' src="Sounds/space.mp3" loop autoplay></audio>
+    <img id='mute' class='visible' src="mute.png" alt="" />
+    <img id='sound' src="sound.png" alt="" />
 
     <script src="app.js"></script>
     <script src="minuterie.js"></script>
