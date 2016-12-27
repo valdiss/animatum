@@ -74,10 +74,13 @@ let scrollBackground = function(map, ratioW, ratioH, position_obj) {
     lapin.style["width"] = position_obj.width + "px";
 };
 
+let refreshPage= function(){
+    window.location.reload();
+};
+
 let ready = function() {
     score = 0;
     position_obj = table_background_espace[Math.floor(Math.random() * 6)];
-    console.log(position_obj);
 
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;
     ratioH = (map.offsetHeight - view.offsetHeight) / view.offsetHeight;
@@ -89,16 +92,14 @@ let ready = function() {
     });
 
     rabbit.addEventListener("click", function() {
-        alert('Bien joué gros!');
+        alert('Bien joué gros!'); //faire apparaitre un popup
         timeLeft+=5;
         score+= 10;
         map.src = backgrounds[Math.floor(Math.random() * 2)];
         if (map.src.match("space")) {
             position_obj = table_background_espace[Math.floor(Math.random() * 6)];
-            console.log(position_obj);
         } else if (map.src.match("forest")) {
             position_obj = table_background_foret[Math.floor(Math.random() * 6)];
-            console.log(position_obj);
         }
     });
 
