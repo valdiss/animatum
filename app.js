@@ -146,11 +146,11 @@ let ready = function() {
     /**************************************random first background*/
     map.src = backgrounds[Math.floor(Math.random() * 3)];
     if (map.src.match("space")) {
-        position_obj = table_background_espace[Math.floor(Math.random() * 6)];
+        position_obj = table_background_space[Math.floor(Math.random() * 6)];
     } else if (map.src.match("forest")) {
-        position_obj = table_background_foret[Math.floor(Math.random() * 6)];
+        position_obj = table_background_forest[Math.floor(Math.random() * 6)];
     } else if (map.src.match("polar")) {
-        position_obj = table_background_polar[Math.floor(Math.random() * 6)];
+        position_obj = table_background_polar[Math.floor(Math.random() * 5)];
     }
     /**************************************/
 
@@ -218,7 +218,7 @@ let ready = function() {
         } else if (map.src.match("forest")) {
             position_obj = table_background_forest[Math.floor(Math.random() * 6)];
         } else if (map.src.match("polar")) {
-            position_obj = table_background_polar[Math.floor(Math.random() * 6)];
+            position_obj = table_background_polar[Math.floor(Math.random() * 5)];
         }
 
     });
