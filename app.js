@@ -1,6 +1,7 @@
 /*special Hotline Miami*/
 let hm = document.getElementById('hotline');
 let shot = document.getElementById('shot');
+// let fail = document.getElementById('fail');
 let kill = document.getElementById('killingspree');
 let monsterkill = document.getElementById('monsterkill');
 let megakill = document.getElementById('megakill');
@@ -116,6 +117,17 @@ let scrollBackground = function(map, ratioW, ratioH, position_obj) {
     lapin.style["width"] = position_obj.width + "px";
 };
 
+let background_change = function (){
+    map.src = backgrounds[Math.floor(Math.random() * 3)];
+    if (map.src.match("space")) {
+        position_obj = table_background_space[Math.floor(Math.random() * 6)];
+    } else if (map.src.match("forest")) {
+        position_obj = table_background_forest[Math.floor(Math.random() * 6)];
+    } else if (map.src.match("polar")) {
+        position_obj = table_background_polar[Math.floor(Math.random() * 5)];
+    }
+};
+
 let countdown = function() {
 
     if (timeLeft < 0) {
@@ -144,14 +156,7 @@ let timerId = setInterval(countdown, 1000);
 let ready = function() {
     countdown();
     /**************************************random first background*/
-    map.src = backgrounds[Math.floor(Math.random() * 3)];
-    if (map.src.match("space")) {
-        position_obj = table_background_space[Math.floor(Math.random() * 6)];
-    } else if (map.src.match("forest")) {
-        position_obj = table_background_forest[Math.floor(Math.random() * 6)];
-    } else if (map.src.match("polar")) {
-        position_obj = table_background_polar[Math.floor(Math.random() * 5)];
-    }
+    background_change();
     /**************************************/
 
     score = 0;
@@ -177,6 +182,9 @@ let ready = function() {
         document.getElementById('mute').classList.toggle('visible');
     });
     /***********************************************************/
+    // view.addEventListener("click", function() {
+    //     fail.play();
+    // });
 
     lapin.addEventListener("click", function() {
         /******************special Hotline Miami*/
@@ -212,15 +220,7 @@ let ready = function() {
         }
         /****************************************/
 
-        map.src = backgrounds[Math.floor(Math.random() * 3)];
-        if (map.src.match("space")) {
-            position_obj = table_background_space[Math.floor(Math.random() * 6)];
-        } else if (map.src.match("forest")) {
-            position_obj = table_background_forest[Math.floor(Math.random() * 6)];
-        } else if (map.src.match("polar")) {
-            position_obj = table_background_polar[Math.floor(Math.random() * 5)];
-        }
-
+        background_change();
     });
 
     rejouer.addEventListener("click", function(){
