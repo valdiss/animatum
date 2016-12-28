@@ -131,7 +131,6 @@ let countdown = function() {
           paragraph.innerHTML = "Tu as fait " + score + " points, bien joué!";
         }
 
-        document.querySelector('h1').appendChild(paragraph);
         cover.classList.add("visible");
         popup.classList.add("visible");
         document.getElementById('down').play();
