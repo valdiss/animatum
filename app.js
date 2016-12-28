@@ -25,8 +25,8 @@ let popup = document.getElementById('score');
 let cover = document.getElementById('cover');
 /*******************************************/
 
-let backgrounds = ["svg_decors/space.png", "svg_decors/forest.png"];
-let table_background_espace = [{
+let backgrounds = ["svg_decors/space.png", "svg_decors/forest.png", "svg_decors/polar.png"];
+let table_background_space = [{
     top: 700,
     left: 1250,
     width: 40
@@ -52,7 +52,7 @@ let table_background_espace = [{
     width: 40
 }];
 
-let table_background_foret = [{
+let table_background_forest = [{
     top: 1780,
     left: 1620,
     width: 30
@@ -75,6 +75,28 @@ let table_background_foret = [{
 }, {
     top: 1700,
     left: 3800,
+    width: 40
+}];
+
+let table_background_polar = [{
+    top: 396,
+    left: 1385,
+    width: 40
+}, {
+    top: 416,
+    left: 313,
+    width: 40
+}, {
+    top: 2110,
+    left: 547,
+    width: 40
+}, {
+    top: 2220,
+    left: 1288,
+    width: 40
+}, {
+    top: 675,
+    left: 2450,
     width: 40
 }];
 
@@ -123,11 +145,13 @@ let timerId = setInterval(countdown, 1000);
 let ready = function() {
     countdown();
     /**************************************random first background*/
-    map.src = backgrounds[Math.floor(Math.random() * 2)];
+    map.src = backgrounds[Math.floor(Math.random() * 3)];
     if (map.src.match("space")) {
         position_obj = table_background_espace[Math.floor(Math.random() * 6)];
     } else if (map.src.match("forest")) {
         position_obj = table_background_foret[Math.floor(Math.random() * 6)];
+    } else if (map.src.match("polar")) {
+        position_obj = table_background_polar[Math.floor(Math.random() * 6)];
     }
     /**************************************/
 
@@ -189,12 +213,15 @@ let ready = function() {
         }
         /****************************************/
 
-        map.src = backgrounds[Math.floor(Math.random() * 2)];
+        map.src = backgrounds[Math.floor(Math.random() * 3)];
         if (map.src.match("space")) {
-            position_obj = table_background_espace[Math.floor(Math.random() * 6)];
+            position_obj = table_background_space[Math.floor(Math.random() * 6)];
         } else if (map.src.match("forest")) {
-            position_obj = table_background_foret[Math.floor(Math.random() * 6)];
+            position_obj = table_background_forest[Math.floor(Math.random() * 6)];
+        } else if (map.src.match("polar")) {
+            position_obj = table_background_polar[Math.floor(Math.random() * 6)];
         }
+
     });
 
     rejouer.addEventListener("click", function(){
