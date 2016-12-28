@@ -22,7 +22,7 @@
     height: 100vh;
     width: 60vh;
     position: absolute;
-    top: 0;
+    top: 0
 }
 
 #view {
@@ -31,6 +31,7 @@
     top: 0;
     position: absolute;
     left: calc(100vw / 2 - 30vh);
+    cursor: crosshair;
 }
 
 #map {
@@ -67,35 +68,6 @@
     position: absolute;
     z-index: 1;
 }
-
-#rabbit:hover {
-    cursor: crosshair;
-}
-
-
-/*************************************************carrot icon*/
-
-#nw, #ne, #se, #sw {
-    height: 50%;
-    width: 50%;
-}
-
-#nw {
-    cursor: url(cursors/carottenw.png), auto;
-}
-
-#ne {
-    cursor: url(cursors/carottene.png), auto;
-}
-
-#sw {
-    cursor: url(cursors/carottesw.png), auto;
-}
-
-#se {
-    cursor: url(cursors/carottese.png), auto;
-}
-
 
 /**************************************************timer*/
 
