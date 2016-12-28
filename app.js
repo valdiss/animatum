@@ -1,12 +1,30 @@
+/*special Hotline Miami*/
+let hm = document.getElementById('hotline');
+let shot = document.getElementById('shot');
+let kill = document.getElementById('killingspree');
+let monsterkill = document.getElementById('monsterkill');
+let megakill = document.getElementById('megakill');
+let ultrakill = document.getElementById('ultrakill');
+let unstoppable = document.getElementById('unstoppable');
+let godlike = document.getElementById('godlike');
+/**********************/
 let mouseX;
 let mouseY;
 let view = document.getElementById('view');
 let map = document.getElementById('map');
 let lapin = document.getElementById('rabbit');
 let bonus = document.getElementById('bonus');
-let shot = document.getElementById('shot');
+let rejouer = document.getElementById('rejouer');
 let ratioW;
 let ratioH;
+
+/**************************************Timer*/
+let timeLeft = 30;
+let timer = document.getElementById("timer");
+let popup = document.getElementById('score');
+let cover = document.getElementById('cover');
+/*******************************************/
+
 let backgrounds = ["svg_decors/space.png", "svg_decors/forest.png"];
 let table_background_espace = [{
     top: 700,
@@ -76,13 +94,44 @@ let scrollBackground = function(map, ratioW, ratioH, position_obj) {
     lapin.style["width"] = position_obj.width + "px";
 };
 
-let refreshPage= function () {
-    window.location.reload();
+let countdown = function() {
+
+    if (timeLeft < 0) {
+        clearTimeout(timerId);
+        let paragraph = document.getElementById('result');;
+        if (score == 0){
+          paragraph.innerHTML = "Tu n'as pas trouvé un seul lapin... T'es mauvais Jack!";
+        }
+        else if (score < 50) {
+          paragraph.innerHTML = "Tu n'as fait que "+ score + " points, c'est vraiment pas terrible! Tu devrais améliorer ce score!";
+        }
+        else {
+          paragraph.innerHTML = "Tu as fait " + score + " points, bien joué!";
+        }
+
+        document.querySelector('h1').appendChild(paragraph);
+        cover.classList.add("visible");
+        popup.classList.add("visible");
+        document.getElementById('down').play();
+    } else {
+        timer.innerHTML = timeLeft;
+        timeLeft--;
+    }
 };
+let timerId = setInterval(countdown, 1000);
 
 let ready = function() {
+    countdown();
+    /**************************************random first background*/
+    map.src = backgrounds[Math.floor(Math.random() * 2)];
+    if (map.src.match("space")) {
+        position_obj = table_background_espace[Math.floor(Math.random() * 6)];
+    } else if (map.src.match("forest")) {
+        position_obj = table_background_foret[Math.floor(Math.random() * 6)];
+    }
+    /**************************************/
+
     score = 0;
-    position_obj = table_background_espace[Math.floor(Math.random() * 6)];
 
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;
     ratioH = (map.offsetHeight - view.offsetHeight) / view.offsetHeight;
@@ -92,36 +141,69 @@ let ready = function() {
         scrollBackground(map, ratioW, ratioH, position_obj);
     });
 
+    /*****************************************Play/Pause button*/
     document.getElementById('mute').addEventListener("click", function() {
-        document.getElementById('space').pause();
+        document.getElementById('hotline').pause();
         document.getElementById('sound').classList.toggle('visible');
         document.getElementById('mute').classList.toggle('visible');
     });
 
     document.getElementById('sound').addEventListener("click", function() {
-        document.getElementById('space').play();
+        document.getElementById('hotline').play();
         document.getElementById('sound').classList.toggle('visible');
         document.getElementById('mute').classList.toggle('visible');
     });
+    /***********************************************************/
 
     lapin.addEventListener("click", function() {
+        /******************special Hotline Miami*/
         shot.play();
-        lapin.src="svg_personnages/rabbit_blood.png";
-        setTimeout(function(){lapin.style.display = "none";},200);
-        bonus.style.display="block";
-        setTimeout(function(){
-          bonus.style.display = "none";
-          lapin.style.display = "block";
-          lapin.src="svg_personnages/rabbit.png";
+        lapin.src = "svg_personnages/rabbit_blood.png";
+        /***************************************/
+        setTimeout(function() {
+            lapin.style.display = "none";
+        }, 200);
+        bonus.style.display = "block";
+        setTimeout(function() {
+            bonus.style.display = "none";
+            lapin.style.display = "block";
+            lapin.src = "svg_personnages/rabbit.png";
         }, 500);
-        timeLeft+=5;
-        score+= 10;
+
+        timeLeft += 5;
+        score += 10;
+
+        /*******************special Hotline Miami*/
+        if (score == 50) {
+            kill.play();
+        } else if (score == 100) {
+            monsterkill.play();
+        } else if (score == 150) {
+            megakill.play();
+        } else if (score == 200) {
+            ultrakill.play();
+        } else if (score == 300) {
+            unstoppable.play();
+        } else if (score == 500) {
+            godlike.play();
+        }
+        /****************************************/
+
         map.src = backgrounds[Math.floor(Math.random() * 2)];
         if (map.src.match("space")) {
             position_obj = table_background_espace[Math.floor(Math.random() * 6)];
         } else if (map.src.match("forest")) {
             position_obj = table_background_foret[Math.floor(Math.random() * 6)];
         }
+    });
+
+    rejouer.addEventListener("click", function(){
+        cover.classList.remove("visible");
+        popup.classList.remove("visible");
+        score = 0;
+        timeLeft = 30;
+        countdown();
+        timerId = setInterval(countdown, 1000);
     });
 
 };

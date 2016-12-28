@@ -4,12 +4,12 @@ let timeLeft = 30;
 let timer = document.getElementById("timer");
 let popup = document.getElementById('score');
 let cover = document.getElementById('cover');
-let timerId = setInterval(countdown, 1000);
 
-function countdown() {
+let countdown = function() {
+
     if (timeLeft < 0) {
         clearTimeout(timerId);
-        let paragraph = document.createElement("p");
+        let paragraph = document.getElementById('result');
         if (score == 0){
           paragraph.innerHTML = "Tu n'as pas trouvé un seul lapin... T'es mauvais Jack!";
         }
@@ -23,12 +23,11 @@ function countdown() {
         document.querySelector('h1').appendChild(paragraph);
         cover.classList.add("visible");
         popup.classList.add("visible");
-        document.getElementById('space').pause();
         document.getElementById('down').play();
     } else {
         timer.innerHTML = timeLeft;
         timeLeft--;
     }
-}
-
-document.addEventListener("DOMContentLoaded", countdown);
+};
+let timerId = setInterval(countdown, 1000);
+document.addEventListener("DOMContentLoaded", countdown());

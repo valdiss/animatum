@@ -32,21 +32,30 @@
     <div id="cover">
         <div id="score">
             <h1>Game over!</h1>
-            <button type="button" onclick="refreshPage()">Rejouer!</button>
+            <p id="result"></p>
+            <button id="rejouer" type="button">Rejouer!</button>
         </div>
     </div>
     <div id="bonus">
       +5s!
     </div>
-
-    <audio id='space' src="Sounds/hydrogen.mp3" loop autoplay></audio>
+    <!-- special Hotline Miami -->
+    <audio id='hotline' src="Sounds/hydrogen.mp3" autoplay loop></audio>
     <audio id='shot' src="Sounds/shot.mp3"></audio>
+    <audio id="killingspree" src="Sounds/killingspree.mp3"></audio>
+    <audio id="monsterkill" src="Sounds/monsterkill.mp3"></audio>
+    <audio id="megakill" src="Sounds/megakill.mp3"></audio>
+    <audio id="ultrakill" src="Sounds/ultrakill.mp3"></audio>
+    <audio id="unstoppable" src="Sounds/unstoppable.mp3"></audio>
+    <audio id="godlike" src="Sounds/godlike.mp3"></audio>
+    <!--  -->
+
     <audio id='down' src="Sounds/down.mp3"></audio>
     <img id='mute' class='visible' src="mute.png" alt="" />
     <img id='sound' src="sound.png" alt="" />
 
     <script src="app.js"></script>
-    <script src="minuterie.js"></script>
+    <!-- <script src="minuterie.js"></script> -->
 </body>
 
 </html>
