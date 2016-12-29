@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Da game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="game_trankil.css">
+    <link rel="shortcut icon" href="favicon/geometric-icon.ico">
+
+</head>
+
+<body>
+    <div class="canvas">
+        <div id="view">
+            <img id="map" src="svg_decors/space.png" alt="" />
+            <img id="rabbit" src="svg_personnages/rabbit.png" alt=""/>
+            <div class="gameWindow">
+                <div id="nw"></div>
+                <div id="ne"></div>
+                <div id="sw"></div>
+                <div id="se"></div>
+            </div>
+        </div>
+        <div id="mask_left" class="mask mask_left"></div>
+        <div id="mask_right" class="mask mask_right"></div>
+
+        <div class="timer">
+            <p id="timer"></p>
+        </div>
+    </div>
+    <div id="cover">
+        <div id="score">
+            <h1>Game over!</h1>
+            <p id="result"></p>
+            <button id="rejouer" type="button">Rejouer!</button>
+        </div>
+    </div>
+    <div id="bonus">
+      +5s!
+    </div>
+    <audio id='hotline' src="Sounds/space.mp3" autoplay loop></audio>
+    <audio id='down' src="Sounds/down.mp3"></audio>
+    <audio id='carrot' src="Sounds/carrot.mp3"></audio>
+    <img id='mute' class='visible' src="mute.png" alt="" />
+    <img id='sound' src="sound.png" alt="" />
+
+    <script src="app_trankil.js"></script>
+</body>
+
+</html>

@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Animatum</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="favicon/geometric-icon.ico">
-  </head>
+</head>
 
-  <body>
+<body>
+    <div id="cover">
+      <div id="agediv">
+        <p>Entre ton age</p>
+        <input id="age" type="text" value="">
+        <input id="submit" type="submit" value="Entrer">
+      </div>
+    </div>
+
     <header>
         <div class="title">
-            <svg version="1.1" id="svg-layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 322 392" enable-background="new 0 0 322 392"
-                xml:space="preserve">
+            <svg version="1.1" id="svg-layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 322 392" enable-background="new 0 0 322 392" xml:space="preserve">
                 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="190.0713" y1="131.9702" x2="222.065" y2="370.1443" gradientTransform="matrix(0.9964 -0.0852 0.0852 0.9964 -52.8605 51.5599)">
                 <stop  offset="0" style="stop-color:#D09451"/>
                 <stop  offset="1" style="stop-color:#FFCD67"/>
@@ -345,44 +353,19 @@
             </svg>
             <h1>Animatum</h1>
         </div>
+
         <nav>
             <ul>
                 <li>
-                    <a href="game.html">Play</a>
+                    <a href="game_trankil.html">Find the rabbit!</a>
                 </li>
                 <li>
-                    <a href="#">How to</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
+                    <a id="hardcore" href="game.html">Shoot the rabbit!</a>
                 </li>
             </ul>
         </nav>
     </header>
-<<<<<<< HEAD
-    <div class="canvas">
-          <div id="view">
-            <img src="" alt="" />
-            <img id="map" src="svg_decors\space.svg.png" alt="" />
-          </div>
-          <div id="mask_left"></div>
-          <div id="mask_right"></div>
-    </div>
-    <footer>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <p id="copyright">
-            &copy Jessica Valentin Alice Linda
-        </p>
-    </footer>
-    <script src="app.js"></script>
-=======
->>>>>>> d4dfc12034be5fd95b236ed7ffb8d2eed45b0aa7
+    <script src="age.js"></script>
 </body>
 
 </html>

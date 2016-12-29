@@ -11,6 +11,57 @@ body {
     background-size: cover;
 }
 
+#cover{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+#agediv {
+    background-color: #646869;
+    border-radius: 10px;
+    padding: 40px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    z-index: 1;
+    margin: 20% auto;
+}
+
+#agediv p {
+    font-family: base, sans-serif;
+    color: white;
+    font-size: 2em;
+    margin: 10px;
+}
+
+#age {
+    height: 40px;
+    width: 40px;
+    font-size: 1.5em;
+}
+
+#submit{
+    font-family: base, sans-serif;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#submit:hover{
+    border: none;
+    box-shadow: inset 0px 0px 7px black;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
 header {
     background-color: rgba(255, 255, 255, 0.6);
     width: 50%;
@@ -70,9 +121,16 @@ nav li a:hover {
       width: 100%;
       margin-top: 35%;
     }
+
+    #agediv {
+      width: 80%;
+      margin-top: 35%;
+    }
+
     h1 {
       font-size: 5em;
     }
+
     #svg-layer{
       width: 125px;
       height: 125px;
@@ -84,12 +142,16 @@ nav li a:hover {
       margin-top: 45%;
     }
 
+    #agediv{
+      margin-top: 45%;
+    }
+
     h1 {
       font-size: 4em;
     }
+
     #svg-layer{
       width: 100px;
       height: 100px;
     }
-
 }
