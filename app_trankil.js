@@ -1,19 +1,9 @@
-/*special Hotline Miami*/
-let hm = document.getElementById('hotline');
-let shot = document.getElementById('shot');
-// let fail = document.getElementById('fail');
-let kill = document.getElementById('killingspree');
-let monsterkill = document.getElementById('monsterkill');
-let megakill = document.getElementById('megakill');
-let ultrakill = document.getElementById('ultrakill');
-let unstoppable = document.getElementById('unstoppable');
-let godlike = document.getElementById('godlike');
-/**********************/
 let mouseX;
 let mouseY;
 let view = document.getElementById('view');
 let map = document.getElementById('map');
 let lapin = document.getElementById('rabbit');
+let carrot = document.getElementById('carrot');
 let bonus = document.getElementById('bonus');
 let rejouer = document.getElementById('rejouer');
 let ratioW;
@@ -134,10 +124,10 @@ let countdown = function() {
         clearTimeout(timerId);
         let paragraph = document.getElementById('result');;
         if (score == 0){
-          paragraph.innerHTML = "Tu n'as pas trouvé un seul lapin... T'es mauvais Jack!";
+          paragraph.innerHTML = "Tu n'as pas trouvé un seul lapin... Dommage!";
         }
         else if (score < 50) {
-          paragraph.innerHTML = "Tu n'as fait que "+ score + " points, c'est vraiment pas terrible! Tu devrais améliorer ce score!";
+          paragraph.innerHTML = "Tu n'as fait que "+ score + " points, tu devrais améliorer ce score!";
         }
         else {
           paragraph.innerHTML = "Tu as fait " + score + " points, bien joué!";
@@ -182,15 +172,9 @@ let ready = function() {
         document.getElementById('mute').classList.toggle('visible');
     });
     /***********************************************************/
-    // view.addEventListener("click", function() {
-    //     fail.play();
-    // });
 
     lapin.addEventListener("click", function() {
-        /******************special Hotline Miami*/
-        shot.play();
-        lapin.src = "svg_personnages/rabbit_blood.png";
-        /***************************************/
+        carrot.play();
         setTimeout(function() {
             lapin.style.display = "none";
         }, 200);
@@ -198,27 +182,10 @@ let ready = function() {
         setTimeout(function() {
             bonus.style.display = "none";
             lapin.style.display = "block";
-            lapin.src = "svg_personnages/rabbit.png";
         }, 500);
 
         timeLeft += 5;
         score += 10;
-
-        /*******************special Hotline Miami*/
-        if (score == 50) {
-            kill.play();
-        } else if (score == 100) {
-            monsterkill.play();
-        } else if (score == 150) {
-            megakill.play();
-        } else if (score == 200) {
-            ultrakill.play();
-        } else if (score == 300) {
-            unstoppable.play();
-        } else if (score == 500) {
-            godlike.play();
-        }
-        /****************************************/
 
         background_change();
     });

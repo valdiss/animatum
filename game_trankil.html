@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Da game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="game_trankil.css">
     <link rel="shortcut icon" href="favicon/geometric-icon.ico">
 
 </head>
@@ -15,6 +15,12 @@
         <div id="view">
             <img id="map" src="svg_decors/space.png" alt="" />
             <img id="rabbit" src="svg_personnages/rabbit.png" alt=""/>
+            <div class="gameWindow">
+                <div id="nw"></div>
+                <div id="ne"></div>
+                <div id="sw"></div>
+                <div id="se"></div>
+            </div>
         </div>
         <div id="mask_left" class="mask mask_left"></div>
         <div id="mask_right" class="mask mask_right"></div>
@@ -33,23 +39,13 @@
     <div id="bonus">
       +5s!
     </div>
-    <!-- special Hotline Miami -->
-    <audio id='hotline' src="Sounds/hydrogen.mp3" autoplay loop></audio>
-    <audio id='shot' src="Sounds/shot.mp3"></audio>
-    <!-- <audio id="fail" src="Sounds/fail.mp3"></audio> -->
-    <audio id="killingspree" src="Sounds/killingspree.mp3"></audio>
-    <audio id="monsterkill" src="Sounds/monsterkill.mp3"></audio>
-    <audio id="megakill" src="Sounds/megakill.mp3"></audio>
-    <audio id="ultrakill" src="Sounds/ultrakill.mp3"></audio>
-    <audio id="unstoppable" src="Sounds/unstoppable.mp3"></audio>
-    <audio id="godlike" src="Sounds/godlike.mp3"></audio>
-    <!--  -->
-
+    <audio id='hotline' src="Sounds/space.mp3" autoplay loop></audio>
     <audio id='down' src="Sounds/down.mp3"></audio>
+    <audio id='carrot' src="Sounds/carrot.mp3"></audio>
     <img id='mute' class='visible' src="mute.png" alt="" />
     <img id='sound' src="sound.png" alt="" />
 
-    <script src="app.js"></script>
+    <script src="app_trankil.js"></script>
 </body>
 
 </html>
