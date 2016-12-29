@@ -60,7 +60,21 @@
     right: 0;
 }
 
-
+/****************logo in mask left**********************/
+@font-face {
+    font-family: geometric;
+    src: url(fonts/R&C-Demo.otf);
+}
+.place_logo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.animatum_logo {
+	font-family: geometric;
+	text-align: center;
+	font-size: 60px;
+}
 /*************************************************rabbit*/
 
 #rabbit {
