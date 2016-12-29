@@ -68,12 +68,12 @@
 .place_logo {
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: 5vw;
 }
 .animatum_logo {
 	font-family: geometric;
 	text-align: center;
-	font-size: 60px;
+	font-size: 3rem;
 }
 /*************************************************rabbit*/
 
