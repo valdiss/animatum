@@ -20,17 +20,17 @@
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
-    width: 60vh;
+    width: 40%;
     position: absolute;
     top: 0
 }
 
 #view {
-    width: 60vh;
+    width: 40%;
     height: 100vh;
     top: 0;
     position: absolute;
-    left: calc(100vw / 2 - 30vh);
+    left: calc((100vw - 40%) / 2);
     cursor: crosshair;
 }
 
@@ -47,7 +47,7 @@
     background-position: center;
     background-size: cover;
     position: absolute;
-    width: calc(100vw / 2 - 30vh);
+    width: calc((100vw - 40%) / 2);
     height: 100vh;
     top: 0;
     z-index: 2;
@@ -61,7 +61,26 @@
     right: 0;
 }
 
+/****************logo in mask left**********************/
+@font-face {
+    font-family: geometric;
+    src: url(fonts/R&C-Demo.otf);
+}
+.place_logo {
+	position: absolute;
+	bottom: 0;
+    width: 25vw;
+	height: 10vh;
+	margin-left: 3vw;
 
+}
+.animatum_logo {
+	position: relative;
+	font-family: geometric;
+	text-align: center;
+	font-size: 5vw;
+	color: #fff;
+}
 /*************************************************rabbit*/
 
 #rabbit {
