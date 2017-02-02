@@ -87,7 +87,10 @@
     position: absolute;
     z-index: 1;
 }
-
+#air {
+    position: absolute;
+    z-index: 1;
+}
 /**************************************************timer*/
 
 .timer {
