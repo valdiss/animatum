@@ -237,8 +237,13 @@ let ready = function() {
             lapin.style.display = "block";
             lapin.src = "svg_personnages/rabbit.png";
         }, 500);
+        if (window.innerWidth < 1000) {
+          timeLeft += 10;
+        }
+        else {
+          timeLeft += 5;
+        }
 
-        timeLeft += 5;
         score += 10;
 
         /*******************special Hotline Miami*/

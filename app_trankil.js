@@ -198,8 +198,12 @@ let ready = function() {
             bonus.style.display = "none";
             lapin.style.display = "block";
         }, 500);
-
-        timeLeft += 5;
+        if (window.innerWidth < 1000) {
+          timeLeft += 10;
+        }
+        else {
+          timeLeft += 5;
+        }
         score += 10;
 
         background_change();
