@@ -155,9 +155,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let timerId = setInterval(countdown, 1000);
 
     countdown();
-    /**************************************random first background*/
-    background_change();
-    /**************************************/
 
     score = 0;
     lapin.style["top"] = position_obj.top + "px";

@@ -186,9 +186,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     countdown();
-    /**************************************random first background*/
-    background_change();
-    /**************************************/
     score = 0;
 
 
