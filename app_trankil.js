@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let timerId = setInterval(countdown, 1000);
 
     countdown();
-
+    background_change();
     score = 0;
 
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;

@@ -187,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     countdown();
     score = 0;
+    background_change();
 
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;
     ratioH = (map.offsetHeight - view.offsetHeight) / view.offsetHeight;
