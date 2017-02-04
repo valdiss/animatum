@@ -268,4 +268,8 @@ button:hover {
       font-size: 1em;
       margin: 10px;
   }
+
+  #mute {
+      overflow: hidden;
+  }
 }
