@@ -30,6 +30,7 @@ let ready = function() {
     let timeLeft = 30;
     if (window.innerWidth < 1000) {
       timeLeft = 50;
+      bonus.innerHTML = "+10s";
     }
     let timer = document.getElementById("timer");
     let popup = document.getElementById('score');
