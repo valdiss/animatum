@@ -1,4 +1,4 @@
-let ready = function() {
+document.addEventListener("DOMContentLoaded", function() {
 
 
 
@@ -29,8 +29,8 @@ let ready = function() {
     /**************************************Timer*/
     let timeLeft = 30;
     if (window.innerWidth < 1000) {
-      timeLeft = 50;
-      bonus.innerHTML = "+10s";
+        timeLeft = 50;
+        bonus.innerHTML = "+10s";
     }
     let timer = document.getElementById("timer");
     let popup = document.getElementById('score');
@@ -244,10 +244,9 @@ let ready = function() {
             lapin.src = "svg_personnages/rabbit.png";
         }, 500);
         if (window.innerWidth < 1000) {
-          timeLeft += 10;
-        }
-        else {
-          timeLeft += 5;
+            timeLeft += 10;
+        } else {
+            timeLeft += 5;
         }
 
         score += 10;
@@ -277,12 +276,10 @@ let ready = function() {
         score = 0;
         timeLeft = 30;
         if (window.innerWidth < 1000) {
-          timeLeft = 50;
+            timeLeft = 50;
         }
         countdown();
         timerId = setInterval(countdown, 1000);
     });
 
-};
-
-document.addEventListener("DOMContentLoaded", ready());
+});
