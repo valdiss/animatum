@@ -255,6 +255,10 @@ button:hover {
       left: 44%;
   }
 
+  #score {
+      width: 80%;
+  }
+
   #score h1 {
       font-size: 2em;
   }

@@ -14,6 +14,9 @@ let ready = function() {
 
     /**************************************Timer*/
     let timeLeft = 30;
+    if (window.innerWidth < 1000) {
+      timeLeft = 50;
+    }
     let timer = document.getElementById("timer");
     let popup = document.getElementById('score');
     let cover = document.getElementById('cover');
@@ -207,6 +210,9 @@ let ready = function() {
         popup.classList.remove("visible");
         score = 0;
         timeLeft = 30;
+        if (window.innerWidth < 1000) {
+          timeLeft = 50;
+        }
         countdown();
         timerId = setInterval(countdown, 1000);
     });
