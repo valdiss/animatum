@@ -158,7 +158,8 @@ let ready = function() {
     /**************************************random first background*/
     background_change();
     /**************************************/
-
+    map.style["top"] = 0 + "px";
+    map.style["left"] = 0 + "px";
     score = 0;
     lapin.style["top"] = position_obj.top + "px";
     lapin.style["left"] = position_obj.left + "px";

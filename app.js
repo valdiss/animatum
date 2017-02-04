@@ -184,11 +184,13 @@ let ready = function() {
     };
     let timerId = setInterval(countdown, 1000);
 
+
     countdown();
     /**************************************random first background*/
     background_change();
     /**************************************/
-
+    map.style["top"] = 0 + "px";
+    map.style["left"] = 0 + "px";
     score = 0;
 
 
