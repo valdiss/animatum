@@ -108,6 +108,12 @@ let ready = function() {
         lapin.style["top"] = -mouseY * ratioH + position_obj.top + "px";
         lapin.style["left"] = -mouseX * ratioW + position_obj.left + "px";
         lapin.style["width"] = position_obj.width + "px";
+
+        if (window.innerWidth < 1000) {
+            lapin.style["top"] = position_obj.top + "px";
+            lapin.style["left"] = position_obj.left + "px";
+            lapin.style["width"] = position_obj.width + "px";
+        }
     };
 
     let background_change = function() {
@@ -154,10 +160,16 @@ let ready = function() {
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;
     ratioH = (map.offsetHeight - view.offsetHeight) / view.offsetHeight;
 
-    view.addEventListener("mousemove", updateMouse);
-    view.addEventListener("mousemove", function() {
-        scrollBackground(map, ratioW, ratioH, position_obj);
-    });
+    if (window.innerWidth > 1000) {
+        view.addEventListener("mousemove", updateMouse);
+        view.addEventListener("mousemove", function() {
+            scrollBackground(map, ratioW, ratioH, position_obj);
+        });
+    } else {
+        view.addEventListener("click", function() {
+            scrollBackground(map, ratioW, ratioH, position_obj);
+        });
+    }
 
     /*****************************************Play/Pause button*/
     document.getElementById('mute').addEventListener("click", function() {

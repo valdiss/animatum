@@ -5,29 +5,29 @@ let submit = document.getElementById('submit');
 
 let ready = function (){
 
-  input.value = sessionStorage.getItem("age");
+  input.value = localStorage.getItem("age");
   if (!input.value) {
     submit.addEventListener("click",function(){
 
       if (input.value < 16) {
         hardcore.style.display = 'none';
         cover.style.display = 'none';
-        sessionStorage.setItem("age", input.value);
+        localStorage.setItem("age", input.value);
       }
       else if (input.value >= 16) {
         cover.style.display = 'none';
-        sessionStorage.setItem("age", input.value);
+        localStorage.setItem("age", input.value);
       }
     });
   }
   else if (input.value < 16) {
     hardcore.style.display = 'none';
     cover.style.display = 'none';
-    sessionStorage.setItem("age", input.value);
+    localStorage.setItem("age", input.value);
   }
   else if (input.value >= 16) {
     cover.style.display = 'none';
-    sessionStorage.setItem("age", input.value);
+    localStorage.setItem("age", input.value);
   }
 };
 

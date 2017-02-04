@@ -16,15 +16,6 @@
     height: 100vh;
 }
 
-.gameWindow {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    width: 40%;
-    position: absolute;
-    top: 0
-}
-
 #view {
     width: 40%;
     height: 100vh;
@@ -217,10 +208,60 @@ button:hover {
     position: absolute;
     top: 36%;
     left: calc(((100vw / 2 - 20vh) / 2) - 7.5vh);
-    background-color: rgba(0, 0, 0, 0.8);;
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 3;
 }
 
 #bonus.visible {
     display: block;
+}
+
+
+@media all and (max-width : 1000px) {
+  *{
+    overflow: scroll;
+  }
+
+  .canvas {
+      width: 100%;
+      overflow: scroll;
+  }
+
+  #view {
+      width: 100%;
+      left:0;
+  }
+
+  #mask_left, #mask_right {
+    display:none;
+  }
+
+  .timer {
+    position: fixed;
+    top: 90%;
+    left: 40%;
+    font-size: 4vh;
+    height: 10vh;
+    width: 10vh;
+    box-shadow: none;
+
+  }
+
+  #bonus {
+      position: fixed;
+      font-size: 1.5em;
+      background-color: transparent;
+      top: 86%;
+      left: 44%;
+  }
+
+  #score h1 {
+      font-size: 2em;
+  }
+
+  #score p {
+      font-family: base, sans-serif;
+      font-size: 1em;
+      margin: 10px;
+  }
 }
