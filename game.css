@@ -272,4 +272,7 @@ button:hover {
   #mute {
       overflow: hidden;
   }
+  #sound {
+      overflow: hidden;
+  }
 }
