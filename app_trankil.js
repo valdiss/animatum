@@ -228,4 +228,4 @@ let ready = function() {
 
 };
 
-document.addEventListener("load", ready);
+document.addEventListener("DOMContentLoaded", ready());
