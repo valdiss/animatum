@@ -160,6 +160,10 @@ let ready = function() {
     /**************************************/
 
     score = 0;
+    lapin.style["top"] = position_obj.top + "px";
+    lapin.style["left"] = position_obj.left + "px";
+    lapin.style["width"] = position_obj.width + "px";
+
 
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;
     ratioH = (map.offsetHeight - view.offsetHeight) / view.offsetHeight;
