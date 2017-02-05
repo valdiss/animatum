@@ -156,6 +156,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     countdown();
     background_change();
+    lapin.style["top"] = position_obj.top + "px";
+    lapin.style["left"] = position_obj.left + "px";
+    lapin.style["width"] = position_obj.width + "px";
     score = 0;
 
     ratioW = (map.offsetWidth - view.offsetWidth) / view.offsetWidth;
