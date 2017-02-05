@@ -1,5 +1,5 @@
 window.addEventListener("load", function() {
-    document.getElementById('loadcover').style['display'] = "none";
+    document.getElementById('loadcover').classList.add('hidden');
 
     /*special Hotline Miami*/
     let hm = document.getElementById('hotline');
